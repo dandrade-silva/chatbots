@@ -13,10 +13,35 @@ Digite uma das opções abaixo (1 a 5):
 AHH, você vai ficar recebendo essa mensagem até 
 digitar uma opção válida
 """
+menu_familia = """
+Qual seu grau de parentesco com ele? :(
+
+Digite uma das opções abaixo (1 a 5): 
+============================
+[1] Mãe
+[2] Irmão
+[3] Primo(a)
+[4] Sobrinho(a)
+[5] Tio(a)
+============================
+AHH, você vai ficar recebendo essa mensagem até 
+digitar uma opção válida
+"""
 
 
 def familia():
-    return "Opção Familia..."
+    while True:
+        grau_parentesco = input(menu_familia)
+        if grau_parentesco == 1:
+            return "Opção Mãe..."
+        elif grau_parentesco == 2:
+            return "Opção Irmão..."
+        elif grau_parentesco == 3:
+            return "Opção Primo(a)..."
+        elif grau_parentesco == 4:
+            return "Opção Sobrinho..."
+        elif grau_parentesco == 5:
+            return "Opção Tio(a)..."
 
 
 def amigo():
@@ -33,15 +58,6 @@ def cobranca():
 
 def trabalho():
     return "Opção Trabalho..."
-
-
-opcoes = {
-    1: familia,
-    2: amigo,
-    3: colega,
-    4: cobranca,
-    5: trabalho
-}
 
 
 def atendimento(mensagem):
